@@ -15,11 +15,6 @@
         <th>title</th>
         <td th:text="${board.boardTitle}"></td>
     </tr>
-    <tr>
-        <th>writer</th>
-        <td th:text="${board.boardWriter}"></td>
-    </tr>
-    <tr>
         <th>date</th>
         <td th:text="${board.boardCreatedTime}"></td>
     </tr>
@@ -33,8 +28,7 @@
     </tr>
 </table>
 <a href="/board">글목록</a>
-<button onclick="updateReq()">수정</button><br>
-pass: <input type="text" name="boardPass" id="boardPass">
+<button onclick="updateReq()">수정</button>
 <button onclick="boardDelete()">삭제</button>
 
 </body>
@@ -45,14 +39,9 @@ const id = [[${board.id}]];
 location.href = "/board/update/" + id;
 }
 const boardDelete = () => {
-    const inputPass = document.getElementById("boardPass").value;
-    if (pass == inputPass) {
-        console.log("삭제 요청");
-        const id = [[${board.id}]];
-        location.href = "/board/delete/" + id;
-    } else {
-        alert("비밀번호가 일치하지 않습니다!");
-    }
+    console.log("삭제 요청");
+    const id = [[${board.id}]];
+    location.href = "/board/delete/" + id;
 }
 
 </script>

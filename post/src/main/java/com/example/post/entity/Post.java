@@ -26,21 +26,4 @@ public class Post extends Timestamped {
         this.contents = requestDto.getContents();
 
     }
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void update(PostRequestDto postRequestDto) {
-        this.username = postRequestDto.getUsername();
-        this.password = postRequestDto.getPassword();
-        this.title = postRequestDto.getTitle();
-        this.contents = postRequestDto.getContents();
-
-    }
-    public void setPost(Post post) {
-        this.title = post.getTitle();
-        this.password = post.getPassword();
-        this.title = post.getTitle();
-        this.contents = post.getContents()
-    }
 }

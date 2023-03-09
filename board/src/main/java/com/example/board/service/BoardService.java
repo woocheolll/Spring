@@ -25,9 +25,9 @@ public class BoardService {
 
     @Transient
     public List<BoardDTO> findAll() {
-        List<BoardEntity> boardEntityList = boardRepository.findAll();
+        List<BoardEntity> boardEntityEntityList = boardRepository.findAll();
         List<BoardDTO> boardDTOList = new ArrayList<>();
-        for (BoardEntity boardEntity : boardEntityList) {
+        for (BoardEntity boardEntity : boardEntityEntityList) {
             boardDTOList.add(BoardDTO.toBoardDTO(boardEntity));
         }
         return boardDTOList;
